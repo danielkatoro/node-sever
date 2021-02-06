@@ -1,13 +1,11 @@
-import express from 'express';
+import express from 'express'
+import userRoute from (./routes/userRoute.js);
 
-//instance express
-const app = express;
+const app = express; //instance express
 
-//set port
-const port= 4000;
+const port= 4000; //set port
 
-//configure environnement
-app.use(express.json());
+app.use(express.json()); //configure environnement
 
 //define routes
 app.get('/' (req,res) =>{
@@ -16,3 +14,7 @@ app.get('/' (req,res) =>{
 
 // use my routes
 app.use('/user',userRoute);
+
+app.listern(port, () => {
+    console.log(`server running on htpp://localhost:${port}`);
+});
