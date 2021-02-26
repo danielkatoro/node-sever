@@ -3,6 +3,6 @@ import signup from './controllers/userController.js';
 
 const router =express.Router();
 
-router.post('/create',signup);
+router.post('/create',home);
 
 export default router;
